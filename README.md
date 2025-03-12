@@ -21,9 +21,9 @@ server {
         resolver 8.8.8.8;
 
         location / {
-                proxy_set_header Access-Control-Allow-Headers '*';
-                proxy_set_header Access-Control-Allow-Methods '*';
-                proxy_set_header Access-Control-Allow-Origin '*';
+                add_header Access-Control-Allow-Headers '*';
+                add_header Access-Control-Allow-Methods '*';
+                add_header Access-Control-Allow-Origin '*';
 
                 proxy_set_header Host $host;
                 proxy_pass http://127.0.0.1:3000;
