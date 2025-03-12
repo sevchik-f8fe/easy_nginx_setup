@@ -3,11 +3,11 @@
  ```
 server {
         listen 443 ssl http2;
-        server_name _;
+        server_name domain.ru;
         index index.js index.html index.htm index.nginx-debian.html;
 
-        ssl_certificate /etc/ssl/vanopoizonserver.crt;
-        ssl_certificate_key /etc/ssl/vanopoizonserver.key;
+        ssl_certificate /etc/ssl/domain.crt;
+        ssl_certificate_key /etc/ssl/domain.key;
         ssl_session_cache shared:SSL:10m;
         ssl_session_timeout 10m;
         keepalive_timeout 70;
